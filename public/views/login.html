@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="/public/css/login.css">
+</head>
+<body>
+    <div id="login-container" class="login-container">
+        <h2>登录</h2>
+        <input type="text" id="username" placeholder="账号" required>
+        <input type="password" id="password" placeholder="密码" required>
+        <button onclick="login()">登录</button>
+    </div>
+
+    <div id="main-page" class="main-page" style="display: none;">
+        <button class="admin-button" onclick="confirmLogout()">Admin</button>
+        <h1>主页面</h1>
+        <p>欢迎来到主页面！</p>
+    </div>
+
+    <script src="/public/js/login.js"></script>
+</body>
+</html>

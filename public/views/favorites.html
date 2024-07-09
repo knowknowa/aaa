@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收藏夹</title>
+    <link rel="stylesheet" href="/public/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/public/images/R.png" alt="Logo" class="logo">
+            <nav class="navigation">
+                <a href="/index.html">首页</a>
+                <a href="#">修改密码</a>
+                <a href="#">批量删除</a>
+                <a href="/favorites.html">收藏夹</a>
+            </nav>
+            <div href="/" class="admin-dropdown">
+                <a  href="/" class="dropbtn">admin</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="search-bar">
+                <div class="left">
+                    <select id="pageSizeSelect" onchange="changePageSize()">
+                        <option value="5">显示5条/页</option>
+                        <option value="10" selected>显示10条/页</option>
+                        <option value="15">显示15条/页</option>
+                        <option value="20">显示20条/页</option>
+                    </select>
+                    <span>收藏总数：</span>
+                    <span id="totalFavorites">0</span>
+                    <div id="topPagination" class="pagination"></div> <!-- 添加顶部分页 -->
+                </div>
+                <div class="right">
+                    <input type="text" id="searchInput" placeholder="请输入手机号" onkeyup="searchFavorites()">
+                    <button onclick="searchFavorites()">搜索</button>
+                </div>
+            </div>
+            <div id="main">
+                <table id="favoritesTable">
+                    <thead>
+                        <tr>
+                            <th>时间/邀请码</th>
+                            <th>用户机型/IP</th>
+                            <th>手机号</th>
+                            <th>亲友关系</th>
+                            <th>当前位置</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 收藏的数据行 -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="pagination" class="pagination"></div> <!-- 底部分页 -->
+        </div>
+    </div>
+    <script src="/public/js/favorites.js"></script>
+</body>
+</html>

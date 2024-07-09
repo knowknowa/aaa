@@ -1,0 +1,313 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    height: 50px;
+}
+
+.navigation a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.navigation a:hover {
+    color: #007BFF;
+}
+
+.admin-dropdown .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar .left, .search-bar .right {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar select, .search-bar input[type="text"], .search-bar button {
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#main {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td div {
+    margin-bottom: 4px;
+    height: 100%;
+}
+
+td button {
+    padding: 6px 12px;
+    margin: 0 2px;
+    background-color: #1275df;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+td button:hover {
+    background-color: #1567be;
+}
+
+/* 新增的CSS类 */
+.favorite-button.active {
+    background-color: rgb(238, 180, 190); /* 设置已收藏按钮的背景色为粉色 */
+    color: white; /* 根据需要设置文本颜色 */
+}
+
+
+.pagination {
+    margin-left: 15px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination a {
+    margin: 0 ;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dad9d9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.pagination a.active {
+    background-color: #d3d3f3;
+    color: #333;
+    border-color: #d3d3f3;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+table th:nth-child(1), table td:nth-child(1) {
+    width: 15%;
+}
+
+table th:nth-child(2), table td:nth-child(2) {
+    width: 15%;
+}
+
+table th:nth-child(3), table td:nth-child(3) {
+    width: 15%;
+}
+
+table th:nth-child(4), table td:nth-child(4) {
+    width: 15%;
+}
+
+table th:nth-child(5), table td:nth-child(5) {
+    width: 15%;
+}
+
+table th:nth-child(6), table td:nth-child(6) {
+    width: 25%;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Modal styles */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1300px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.album-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.album-photos img {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+}
+
+.modal-photo {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-photo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal-photo img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-photo {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close-photo:hover,
+.close-photo:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 添加在 styles.css 文件中 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
